@@ -1,58 +1,56 @@
-[
-    {
-        "name": "Bulbasaur",
-        "description": "Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.",
-        "type": ["Grass", "Poison"],
-        "height": 28,
-        "weight": 15.2
-    },
-    {
-        "name": "Charmander",
-        "description": "The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.",
-        "type": ["Fire"],
-        "height": 42,
-        "weight": 18.7
-    },
-    {
-        "name": "Squirtle",
-        "description": "Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.",
-        "type": ["Water"],
-        "height": 20,
-        "weight": 19.8
-    },
-    {
-        "name": "Arbok",
-        "description": "This Pokémon is terrifically strong in order to constrict things with its body. It can even flatten steel oil drums. Once Arbok wraps its body around its foe, escaping its crunching embrace is impossible.",
-        "type": ["Poison"],
-        "height": 138,
-        "weight": 143.3
-    },
-    {
-        "name": "Pikachu",
-        "description": "Whenever Pikachu comes across something new, it blasts it with a jolt of electricity. If you come across a blackened berry, it's evidence that this Pokémon mistook the intensity of its charge.",
-        "type": ["Electric"],
-        "height": 16,
-        "weight": 13.2
-    },
-    {
-        "name": "Slowbro",
-        "description": "Slowbro's tail has a Shellder firmly attached with a bite. As a result, the tail can't be used for fishing anymore. This causes Slowbro to grudgingly swim and catch prey instead.",
-        "type": ["Water", "Psychic"],
-        "height": 63,
-        "weight": 173.1
-    },
-    {
-        "name": "Gyarados",
-        "description": "When Magikarp evolves into Gyarados, its brain cells undergo a structural transformation. It is said that this transformation is to blame for this Pokémon's wildly violent nature.",
-        "type": ["Water", "Flying"],
-        "height": 256,
-        "weight": 518.1
-    },
-    {
-        "name": "Butterfree",
-        "description": "Butterfree has a superior ability to search for delicious honey from flowers. It can even search out, extract, and carry honey from flowers that are blooming over six miles from its nest.",
-        "type": ["Bug", "Flying"],
-        "height": 42,
-        "weight": 70.5
-    }
-]
+[{
+    "name": "Bulbasaur",
+    "description": "Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.",
+    "type": ["Grass", "Poison"],
+    "height": 28,
+    "weight": 15.2
+},
+{
+    "name": "Charmander",
+    "description": "The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.",
+    "type": ["Fire"],
+    "height": 42,
+    "weight": 18.7
+},
+{
+    "name": "Squirtle",
+    "description": "Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.",
+    "type": ["Water"],
+    "height": 20,
+    "weight": 19.8
+},
+{
+    "name": "Arbok",
+    "description": "This Pokémon is terrifically strong in order to constrict things with its body. It can even flatten steel oil drums. Once Arbok wraps its body around its foe, escaping its crunching embrace is impossible.",
+    "type": ["Poison"],
+    "height": 138,
+    "weight": 143.3
+},
+{
+    "name": "Pikachu",
+    "description": "Whenever Pikachu comes across something new, it blasts it with a jolt of electricity. If you come across a blackened berry, it's evidence that this Pokémon mistook the intensity of its charge.",
+    "type": ["Electric"],
+    "height": 16,
+    "weight": 13.2
+},
+{
+    "name": "Slowbro",
+    "description": "Slowbro's tail has a Shellder firmly attached with a bite. As a result, the tail can't be used for fishing anymore. This causes Slowbro to grudgingly swim and catch prey instead.",
+    "type": ["Water", "Psychic"],
+    "height": 63,
+    "weight": 173.1
+},
+{
+    "name": "Gyarados",
+    "description": "When Magikarp evolves into Gyarados, its brain cells undergo a structural transformation. It is said that this transformation is to blame for this Pokémon's wildly violent nature.",
+    "type": ["Water", "Flying"],
+    "height": 256,
+    "weight": 518.1
+},
+{
+    "name": "Butterfree",
+    "description": "Butterfree has a superior ability to search for delicious honey from flowers. It can even search out, extract, and carry honey from flowers that are blooming over six miles from its nest.",
+    "type": ["Bug", "Flying"],
+    "height": 42,
+    "weight": 70.5
+}]
