@@ -7,7 +7,7 @@ https://nodejs.org/en/download/
 Install MongoDB:
 https://www.mongodb.com/download-center#community
 
-Navigate to the root of the project folder (~\MEN-api-demo) and use following command to
+Navigate to the root of the project folder (~\MEN-api-demo) and use the following command to
 install all of the necessary Node packages:
 ```
 npm install
@@ -27,7 +27,7 @@ node app.js
 
 Download Postman and test the endpoints with the following:
 
-##Getting Pokemon
+## Getting Pokemon
 ```
 GET: localhost:8080/pokemon
 ```
@@ -43,7 +43,7 @@ GET: localhost:8080/pokemon?type=Electric
 ```
 will return all Pokemon of a certain type
 
-##Adding Pokemon
+## Adding Pokemon
 ```
 PUT: localhost:8080/pokemon
 ```
@@ -58,7 +58,7 @@ with JSON in the request body that is consistent with the following:
 }
 ```
 
-##Removing Pokemon
+## Removing Pokemon
 ```
 DELETE: localhost:8080/pokemon
 ```
