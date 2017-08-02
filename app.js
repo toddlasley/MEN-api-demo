@@ -43,6 +43,37 @@ app.route('/pokemon/add')
         });
     });
 
+app.route('/pokemon/remove')
+    .delete(bodyParser.json(), function(req, res){
+        if(req.body.id === undefined) {
+            res.status(406)
+                .send('Please provide a valid JSON object with an "id" field.')
+                .end();
+        }
+        else {
+            mongo.connect(function(db){
+                mongo.removePokemon(db, req.body.id, function(result){
+                    if(result.n === 1 && result.ok === 1){
+                        res.status(200)
+                            .send(req.body.id + ' removed successfully!')
+                            .end();
+                    }
+                    else if(result.n === 0 && result.ok === 1){
+                        res.status(500)
+                            .send('Could not find Pokemon under id ' + req.body.id)
+                            .end();
+                    }
+                    else {
+                        res.status(500)
+                            .send('Failed to remove pokemon.')
+                            .end();
+                    }
+                    mongo.close(db);
+                });                    
+            });
+        }
+    });
+
 app.listen(port, function(){
     console.log("Listening on port " + port);
 })

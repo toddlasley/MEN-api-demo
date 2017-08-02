@@ -1,4 +1,5 @@
-var client = require('mongodb').MongoClient;
+var mongodb = require('mongodb');
+var client = mongodb.MongoClient;
 var url = 'mongodb://user:password@localhost:27017/test';
 
 module.exports = {
@@ -21,6 +22,7 @@ module.exports = {
         db.close();
         console.log('Closed connection to MongoDB instance.');
     },
+    //method for getting pokemon
     getPokemon(db, queryParameters, callback) {
         var queryObject;
         var filterObject;
@@ -40,10 +42,19 @@ module.exports = {
                 callback(err, docs);                
             });
     },
+    //method for getting pokemon
     addPokemon(db, doc, callback) {
         db.collection('pokemon')
             .insertOne(doc, function(err, result){
                 callback(result.insertedCount === 1);
+            });
+    },
+    //method for removing pokemon
+    removePokemon(db, id, callback) {
+        var filterObject = {_id: new mongodb.ObjectID(id)};
+        db.collection('pokemon')
+            .deleteOne(filterObject, function(err, result){
+                callback(result.result);
             });
     }
 }
