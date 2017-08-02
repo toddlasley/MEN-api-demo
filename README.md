@@ -45,7 +45,7 @@ will return all Pokemon of a certain type
 
 ## Adding Pokemon
 ```
-PUT: localhost:8080/pokemon
+PUT: localhost:8080/pokemon/add
 ```
 with JSON in the request body that is consistent with the following:
 ```JSON
@@ -60,7 +60,7 @@ with JSON in the request body that is consistent with the following:
 
 ## Removing Pokemon
 ```
-DELETE: localhost:8080/pokemon
+DELETE: localhost:8080/pokemon/remove
 ```
 with JSON in the request body that is consistent with the following:
 ```JSON
