@@ -9,6 +9,7 @@ app.route('/pokemon')
     .get(function(req, res){        
         mongo.connect(function(db){
             mongo.getPokemon(db, req.query, function(err, docs){
+                res = setResponseHeaders(res, 'GET');
                 if(err){
                     res.status(500)
                         .send('Failed to get Pokemon. Try again later')
@@ -28,6 +29,7 @@ app.route('/pokemon/add')
     .put(bodyParser.json(), function(req, res){
         mongo.connect(function(db){
             mongo.addPokemon(db, req.body, function(pokemonAdded){
+                res = setResponseHeaders(res, 'PUT');
                 if(pokemonAdded){
                     res.status(201)
                         .send(req.body.name + ' added successfully!')
@@ -45,6 +47,7 @@ app.route('/pokemon/add')
 
 app.route('/pokemon/remove')
     .delete(bodyParser.json(), function(req, res){
+        res = setResponseHeaders(res, 'DELETE');
         if(req.body.id === undefined) {
             res.status(406)
                 .send('Please provide a valid JSON object with an "id" field.')
@@ -77,3 +80,12 @@ app.route('/pokemon/remove')
 app.listen(port, function(){
     console.log("Listening on port " + port);
 })
+
+var setResponseHeaders = function(res, method) {
+    res.set({
+        'Access-Control-Allow-Origin': 'http://localhost:' + port,
+        'Access-Control-Allow-Methods': method,
+        'Access-Control-Allow-Headers': 'Content-Type'
+    });
+    return res;
+};
