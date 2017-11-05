@@ -83,7 +83,7 @@ app.listen(port, function(){
 
 var setResponseHeaders = function(res, method) {
     res.set({
-        'Access-Control-Allow-Origin': 'http://localhost:' + port,
+        'Access-Control-Allow-Origin': 'http://localhost:4200',
         'Access-Control-Allow-Methods': method,
         'Access-Control-Allow-Headers': 'Content-Type'
     });
