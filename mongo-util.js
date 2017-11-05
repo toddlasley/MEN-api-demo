@@ -25,18 +25,16 @@ module.exports = {
     //method for getting pokemon
     getPokemon(db, queryParameters, callback) {
         var queryObject;
-        var filterObject;
+
         if(Object.keys(queryParameters).length) {
             queryObject = queryParameters.name !== undefined
                 ? { "name": queryParameters.name }
                 : { "type": queryParameters.type };
-            filterObject = {};        
         }
         else {
             queryObject = {};
-            filterObject = {"name": true};
         }
-        db.collection('pokemon').find(queryObject, filterObject)
+        db.collection('pokemon').find(queryObject, {})
             .sort({"name": 1 })
             .toArray(function(err, docs){
                 callback(err, docs);                
